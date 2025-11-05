@@ -80,10 +80,53 @@ export default {
             height: "0",
           },
         },
+        "ripple": {
+          "0%": {
+            transform: "scale(0.8)",
+            opacity: "0.6",
+          },
+          "100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-20px)",
+          },
+        },
+        "wave": {
+          "0%, 100%": {
+            clipPath: "polygon(0 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%)",
+          },
+          "50%": {
+            clipPath: "polygon(0 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0 100%)",
+          },
+        },
+        "droplet": {
+          "0%": {
+            transform: "translateY(-100%)",
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(100vh)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "ripple": "ripple 2s infinite",
+        "float": "float 3s ease-in-out infinite",
+        "wave": "wave 3s ease-in-out infinite",
+        "droplet": "droplet 2s linear infinite",
       },
     },
   },
